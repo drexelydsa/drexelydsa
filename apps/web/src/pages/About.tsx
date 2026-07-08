@@ -10,19 +10,19 @@ export default function About() {
           We believe a better world is possible.
         </p>
         <p className="text-lg text-content mb-8">
-          Drexel YDSA is the (not yet official!) Drexel University chapter of
+          Drexel YDSA is the Drexel University chapter of
           the Young Democratic Socialists of America. We are a student
           organization dedicated to promoting democratic socialism and social
           justice on campus and in our community. We organize events, campaigns,
           canvasses and political education to raise awareness about issues such
           as economic inequality, climate change, racial justice, and workers'
-          rights.
+          rights. We are accepting of all races and sexualities. Our vision for the world is fundamentally democratic, feminist and anti-racist.
         </p>
         <p className="text-3xl font-semibold text-primary mb-2">
           Capitalism is a broken system.
         </p>
         <p className="text-lg text-content mb-8">
-          We believe that capitalism is a system that prioritizes profit over
+          Capitalism is a system that prioritizes profit over
           people and the planet. It creates and perpetuates inequality,
           exploitation, and environmental destruction. Socialism is an ideology
           that puts the power in the hands of the people rather than the ruling
