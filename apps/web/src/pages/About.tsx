@@ -12,11 +12,20 @@ export default function About() {
         <p className="text-lg text-content mb-8">
           Drexel YDSA is the Drexel University chapter of
           the Young Democratic Socialists of America. We are a student
-          organization dedicated to promoting democratic socialism and social
-          justice on campus and in our community. We organize events, campaigns,
-          canvasses and political education to raise awareness about issues such
-          as economic inequality, climate change, racial justice, and workers'
-          rights. We are accepting of all races and sexualities. Our vision for the world is fundamentally democratic, feminist and anti-racist.
+          organization dedicated to uplifting the students and working people
+          that make our campus and community run. We believe that society
+          should be organized to fulfil the needs of all people, rather than
+          enriching the very few who exploit the vast majority. Students are
+          skipping meals and working long hours to be able to afford their
+          education, graduates are struggling to find employment and realize
+          the dream they were promised, professors are losing what little job
+          security they had, and the working-class community that Drexel
+          University was built on top of is getting priced out and struggling
+          to survive. None of this is inevitable; it is a choice, and we have
+          decided to make a different one. We organize events and campaigns to
+          make this university work for us and not for real estate developers
+          and wealthy executives. Our vision for the world is fundamentally
+          democratic, feminist and anti-racist.
         </p>
         <p className="text-3xl font-semibold text-primary mb-2">
           Capitalism is a broken system.
