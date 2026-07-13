@@ -38,7 +38,7 @@ export default function About() {
           distribution, and exchange, and the wealth is distributed based on
           need rather than profit. We believe that socialism is the only way to
           create a just and equitable society where everyone has access to the
-          resources they need to thrive. we aim to educate our community about
+          resources they need to thrive. We aim to educate our community about
           socialism and bring forth socialist solutions to the capitalist crises we face every single day, big or small.
         </p>
       </div>
