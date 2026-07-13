@@ -33,13 +33,13 @@ export default function About() {
         <p className="text-lg text-content mb-8">
           Capitalism is a system that prioritizes profit over
           people and the planet. It creates and perpetuates inequality,
-          exploitation, and environmental destruction. Socialism is an ideology
-          that puts the power in the hands of the people rather than the ruling
+          exploitation, and environmental destruction. Socialism puts the power in the hands of the people rather than the ruling
           class. The people own and control the means of production,
           distribution, and exchange, and the wealth is distributed based on
           need rather than profit. We believe that socialism is the only way to
           create a just and equitable society where everyone has access to the
-          resources they need to thrive.
+          resources they need to thrive. we aim to educate our community about
+          socialism and bring forth socialist solutions to the capitalist crises we face every single day, big or small.
         </p>
       </div>
     </div>
