@@ -45,4 +45,4 @@ npm run deploy:web # website
 npm run deploy:an-proxy # action network proxy
 ```
 
-> (c) {{ new Date().getFullYear() }} Drexel YDSA. All rights reserved.
+> (c) 2026 Drexel YDSA. All rights reserved.
