@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Calendar, dateFnsLocalizer, type View } from "react-big-calendar";
+import { Calendar, dateFnsLocalizer, type View, type Event } from "react-big-calendar";
 import { format, parse, startOfWeek, getDay } from "date-fns";
 import { enUS } from "date-fns/locale";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -16,10 +16,10 @@ const localizer = dateFnsLocalizer({
 });
 
 export default function EventsCalendar() {
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [currentView, setCurrentView] = useState<View>("month");
   const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -30,7 +30,7 @@ export default function EventsCalendar() {
       .finally(() => setLoading(false));
   }, []);
 
-  const handleSelectEvent = useCallback((event: any) => {
+  const handleSelectEvent = useCallback((event: Event) => {
     setSelectedEvent(event);
   }, []);
 
