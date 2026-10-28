@@ -6,7 +6,9 @@
   },
   "scripts": {
     "build": "cd apps/web && npm run build",
+    "dev:web": "cd apps/web && npm run dev",
     "dev:an-proxy": "cd apps/workers/an-proxy && npm run dev",
+    "deploy:web": "cd apps/web && npm run deploy",
     "deploy:an-proxy": "cd apps/workers/an-proxy && npm run deploy"
   }
 }
