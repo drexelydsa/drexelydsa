@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Menu as MenuIcon } from "lucide-react";
 import NavbarSection from "./NavbarSection";
 import MobileNav from "./MobileNav";
 import dsaLogo from "../../assets/logo.png";
@@ -54,18 +55,7 @@ function Navbar() {
           >
             <span className="sr-only">Toggle menu</span>
             <div className="relative h-6 w-6">
-              {/* Top Bar */}
-              <span
-                className={`absolute left-1/2 block h-0.5 w-6 -translate-x-1/2 bg-current transition-all duration-300 ${
-                  menuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-2"
-                }`}
-              />
-              {/* Bottom Bar */}
-              <span
-                className={`absolute left-1/2 block h-0.5 w-6 -translate-x-1/2 bg-current transition-all duration-300 ${
-                  menuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "top-4"
-                }`}
-              />
+              <MenuIcon className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2" />
             </div>
           </button>
         </div>
