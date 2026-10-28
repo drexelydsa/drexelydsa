@@ -45,16 +45,12 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: workers/an-proxy/package-lock.json
+          cache-dependency-path: apps/workers/an-proxy/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: workers/an-proxy
-
-      - name: Build an-proxy worker
-        run: npm run build:an-proxy
-        working-directory: workers/an-proxy
+        working-directory: apps/workers/an-proxy
 
       - name: Test an-proxy worker
-        run: npm run test:an-proxy
-        working-directory: workers/an-proxy
+        run: npm run test
+        working-directory: apps/workers/an-proxy
