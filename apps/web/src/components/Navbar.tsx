@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import dsaLogo from "../assets/logo.png";
 
-function NavbarSection({ title }: { title: string }) {
+function NavbarSection({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick?: () => void;
+}) {
   return (
     <a
       href={`#${title.toLowerCase()}`}
+      onClick={onClick}
       className="font-bold text-2xl group relative inline-flex flex-col items-center text-background hover:text-background secondary transition-colors duration-300 leading-none"
     >
       {title}
@@ -33,11 +40,10 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (menuOpen) {
-      setIsHidden(false);
-    }
-  }, [menuOpen]);
+  function closeMenu() {
+    setMenuOpen((open) => !open);
+    setIsHidden(false);
+  }
 
   return (
     <nav
@@ -47,7 +53,7 @@ function Navbar() {
       }`}
     >
       <div className="relative text-background max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <img src={dsaLogo} alt="Drexel YDSA Logo" className="h-32" />
+        <img src={dsaLogo} alt="Drexel YDSA Logo" className="h-16 md:h-32" />
         <div className="hidden items-center space-x-8 md:flex">
           <NavbarSection title="Home" />
           <NavbarSection title="About" />
@@ -88,16 +94,19 @@ function Navbar() {
           }`}
         >
           <div className="flex h-full flex-col items-center justify-center gap-8 px-8 text-center">
-            <NavbarSection title="Home" />
-            <NavbarSection title="About" />
-            <NavbarSection title="Events" />
-            <NavbarSection title="Contact" />
+            <NavbarSection title="Home" onClick={closeMenu} />
+            <NavbarSection title="About" onClick={closeMenu} />
+            <NavbarSection title="Events" onClick={closeMenu} />
+            <NavbarSection title="Contact" onClick={closeMenu} />
             <a
               href="https://act.dsausa.org/donate/membership/"
               target="_blank"
               className="w-full"
             >
-              <button className="w-full uppercase px-6 py-4 bg-background text-content font-black text-xl rounded-full hover:bg-background-secondary transition-colors duration-300">
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="w-full uppercase px-6 py-4 bg-background text-content font-black text-xl rounded-full hover:bg-background-secondary transition-colors duration-300"
+              >
                 Join DSA
               </button>
             </a>
