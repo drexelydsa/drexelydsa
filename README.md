@@ -16,9 +16,7 @@ This is the repository for the website of Drexel University's YDSA chapter. In t
 git clone https://github.com/drexelydsa/drexelydsa.git/
 ```
 
-1.
-
-Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
@@ -38,7 +36,7 @@ npm run dev:an-proxy
 
 ## How to deploy?
 
-You can deploy via Github Actions by committing and pushing to the main branch. If you want to deploy manually, you can run the following command:
+You can deploy via Github Actions by committing and pushing to the main branch. If you want to deploy manually, you can run the following commands:
 
 ```bash
 npm run deploy:web # website
