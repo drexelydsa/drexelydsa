@@ -18,18 +18,23 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: apps/web/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: apps/web
 
       - name: Run linter
         run: npm run lint
+        working-directory: apps/web
 
       - name: Run tests
         run: npm run test:run
+        working-directory: apps/web
 
       - name: Build
         run: npm run build
+        working-directory: apps/web
   workers-an-proxy:
     runs-on: ubuntu-latest
     steps:
@@ -40,11 +45,16 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: workers/an-proxy/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: workers/an-proxy
 
       - name: Build an-proxy worker
         run: npm run build:an-proxy
+        working-directory: workers/an-proxy
+
       - name: Test an-proxy worker
         run: npm run test:an-proxy
+        working-directory: workers/an-proxy
