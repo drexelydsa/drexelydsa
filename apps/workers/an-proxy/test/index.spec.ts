@@ -1,24 +1,65 @@
-import { env, createExecutionContext, waitOnExecutionContext, SELF } from 'cloudflare:test';
-import { describe, it, expect } from 'vitest';
+import { env, createExecutionContext, waitOnExecutionContext } from 'cloudflare:test';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import worker from '../src/index';
 
-// For now, you'll need to do something like this to get a correctly-typed
-// `Request` to pass to `worker.fetch()`.
 const IncomingRequest = Request<unknown, IncomingRequestCfProperties>;
 
-describe('Hello World worker', () => {
-	it('responds with Hello World! (unit style)', async () => {
-		const request = new IncomingRequest('http://example.com');
-		// Create an empty context to pass to `worker.fetch()`.
-		const ctx = createExecutionContext();
-		const response = await worker.fetch(request, env, ctx);
-		// Wait for all `Promise`s passed to `ctx.waitUntil()` to settle before running test assertions
-		await waitOnExecutionContext(ctx);
-		expect(await response.text()).toMatchInlineSnapshot(`"Hello World!"`);
+describe('AN Proxy Worker', () => {
+	describe('CORS preflight', () => {
+		it('responds to OPTIONS with CORS headers', async () => {
+			const request = new IncomingRequest('http://example.com/api/events', { method: 'OPTIONS' });
+			const ctx = createExecutionContext();
+			const response = await worker.fetch(request, env, ctx);
+			await waitOnExecutionContext(ctx);
+
+			expect(response.headers.get('Access-Control-Allow-Origin')).toBe('*');
+			expect(response.headers.get('Access-Control-Allow-Methods')).toContain('GET');
+		});
 	});
 
-	it('responds with Hello World! (integration style)', async () => {
-		const response = await SELF.fetch('https://example.com');
-		expect(await response.text()).toMatchInlineSnapshot(`"Hello World!"`);
+	describe('proxy requests', () => {
+		beforeEach(() => {
+			vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify({ test: true }), { status: 200 }));
+		});
+
+		afterEach(() => {
+			vi.restoreAllMocks();
+		});
+
+		it('forwards GET to the Action Network API', async () => {
+			const request = new IncomingRequest('http://example.com/api/events');
+			const ctx = createExecutionContext();
+			const response = await worker.fetch(request, env, ctx);
+			await waitOnExecutionContext(ctx);
+
+			expect(globalThis.fetch).toHaveBeenCalledWith('https://actionnetwork.org/api/v2/events', expect.objectContaining({ method: 'GET' }));
+			expect(response.status).toBe(200);
+			expect(response.headers.get('Access-Control-Allow-Origin')).toBe('*');
+		});
+
+		it('includes OSDI-API-Token in the forwarded request', async () => {
+			const request = new IncomingRequest('http://example.com/api/events');
+			const ctx = createExecutionContext();
+			await worker.fetch(request, env, ctx);
+			await waitOnExecutionContext(ctx);
+
+			expect(globalThis.fetch).toHaveBeenCalledWith(
+				expect.any(String),
+				expect.objectContaining({
+					headers: expect.objectContaining({
+						'OSDI-API-Token': env.AN_API_KEY,
+					}),
+				}),
+			);
+		});
+
+		it('preserves query parameters when forwarding', async () => {
+			const request = new IncomingRequest('http://example.com/api/events?page=2');
+			const ctx = createExecutionContext();
+			await worker.fetch(request, env, ctx);
+			await waitOnExecutionContext(ctx);
+
+			expect(globalThis.fetch).toHaveBeenCalledWith('https://actionnetwork.org/api/v2/events?page=2', expect.anything());
+		});
 	});
 });
