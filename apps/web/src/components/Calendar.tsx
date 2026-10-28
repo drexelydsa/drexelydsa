@@ -1,5 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import { Calendar, dateFnsLocalizer, type View, type Event } from "react-big-calendar";
+import {
+  Calendar,
+  dateFnsLocalizer,
+  type View,
+  type Event,
+} from "react-big-calendar";
 import { format, parse, startOfWeek, getDay } from "date-fns";
 import { enUS } from "date-fns/locale";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -67,6 +72,7 @@ export default function EventsCalendar() {
         borderRadius: 8,
         padding: 16,
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+        width: "100%",
       }}
     >
       <div style={{ height: 600 }}>
@@ -142,7 +148,9 @@ export default function EventsCalendar() {
             {selectedEvent.resource?.description && (
               <div
                 style={{ marginBottom: 16, color: "#333", fontSize: 14 }}
-                dangerouslySetInnerHTML={{ __html: selectedEvent.resource.description }}
+                dangerouslySetInnerHTML={{
+                  __html: selectedEvent.resource.description,
+                }}
               />
             )}
             {selectedEvent.resource?.url && (

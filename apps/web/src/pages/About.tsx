@@ -10,36 +10,48 @@ export default function About() {
           We believe a better world is possible.
         </p>
         <p className="text-lg text-content mb-8">
-          Drexel YDSA is the Drexel University chapter of
-          the Young Democratic Socialists of America. We are a student
-          organization dedicated to uplifting the students and working people
-          that make our campus and community run. We believe that society
-          should be organized to fulfil the needs of all people, rather than
-          enriching the very few who exploit the vast majority. Students are
-          skipping meals and working long hours to be able to afford their
-          education, graduates are struggling to find employment and realize
-          the dream they were promised, professors are losing what little job
-          security they had, and the working-class community that Drexel
-          University was built on top of is getting priced out and struggling
-          to survive. None of this is inevitable; it is a choice, and we have
-          decided to make a different one. We organize events and campaigns to
-          make this university work for us and not for real estate developers
-          and wealthy executives. Our vision for the world is fundamentally
-          democratic, feminist and anti-racist.
+          Drexel YDSA is the Drexel University chapter of the Young Democratic
+          Socialists of America. We are a student organization dedicated to
+          uplifting the students and working people that make our campus and
+          community run. We believe that society should be organized to fulfil
+          the needs of all people, rather than enriching the very few who
+          exploit the vast majority. Students are skipping meals and working
+          long hours to be able to afford their education, graduates are
+          struggling to find employment and realize the dream they were
+          promised, professors are losing what little job security they had, and
+          the working-class community that Drexel University was built on top of
+          is getting priced out and struggling to survive. None of this is
+          inevitable; it is a choice, and we have decided to make a different
+          one. We organize events and campaigns to make this university work for
+          us and not for real estate developers and wealthy executives. Our
+          vision for the world is fundamentally democratic, feminist and
+          anti-racist.
         </p>
         <p className="text-3xl font-semibold text-primary mb-2">
           Capitalism is a broken system.
         </p>
         <p className="text-lg text-content mb-8">
-          Capitalism is a system that prioritizes profit over
-          people and the planet. It creates and perpetuates inequality,
-          exploitation, and environmental destruction. Socialism puts the power in the hands of the people rather than the ruling
-          class. The people own and control the means of production,
+          Capitalism is a system that prioritizes profit over people and the
+          planet. It creates and perpetuates inequality, exploitation, and
+          environmental destruction. Almost any problem faced in society, from
+          racism to inequality to war and famine is a direct result of the
+          oppresive nature of capitalism. It is a system where the rich become
+          richer and the poor stay impoverished. We want to fight to not only
+          dismantle the capitalist regime in America, but also inspired change
+          right here in University City.{" "}
+        </p>
+        <p className="text-3xl font-semibold text-primary mb-2">
+          Socialism is the solution.
+        </p>
+        <p className="text-lg text-content mb-8">
+          Socialism puts the power in the hands of the people rather than the
+          ruling class. The people own and control the means of production,
           distribution, and exchange, and the wealth is distributed based on
           need rather than profit. We believe that socialism is the only way to
           create a just and equitable society where everyone has access to the
           resources they need to thrive. We aim to educate our community about
-          socialism and bring forth socialist solutions to the capitalist crises we face every single day, big or small.
+          socialism and bring forth socialist solutions to the capitalist crises
+          we face every single day, big or small.
         </p>
       </div>
     </div>
