@@ -1,5 +1,5 @@
 import heroJpg from "../assets/hero.jpg";
-import About from "./About";
+import { About } from "../pages/";
 
 function Home() {
   return (

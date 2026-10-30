@@ -53,15 +53,28 @@ function Navbar() {
         <div className="relative text-background max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <img src={dsaLogo} alt="Drexel YDSA Logo" className="h-16 md:h-32" />
           <div className="hidden items-center space-x-8 md:flex">
-            <NavbarSection title="Home" />
+            <NavbarSection title="Home" route="/" />
             <NavbarSection
               title="About"
               items={[
-                { title: "Drexel YDSA Constitution", href: "/consitution" },
+                { title: "Drexel YDSA Constitution", route: "/consitution" },
               ]}
             />
-            <NavbarSection title="Events" />
-            <NavbarSection title="Contact" />
+            <NavbarSection title="Events" route="/events" />
+            <NavbarSection
+              title="Get Involved"
+              items={[
+                { title: "Campaigns", route: "/campaigns" },
+                {
+                  title: "Interest Form",
+                  route: "https://forms.gle/fmdK5MUeJHJ1YXDRA",
+                },
+                {
+                  title: "Discord",
+                  route: "https://discord.drexelydsa.org",
+                },
+              ]}
+            />
             <a href="https://act.dsausa.org/donate/membership/" target="_blank">
               <button className="uppercase ml-4 px-6 py-4 bg-background text-content font-black text-2xl rounded-full hover:bg-background-secondary transition-colors duration-300">
                 Join DSA
