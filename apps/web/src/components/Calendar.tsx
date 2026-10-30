@@ -20,7 +20,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-export default function EventsCalendar() {
+export function EventsCalendar() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

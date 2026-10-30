@@ -1,4 +1,4 @@
-import EventsCalendar from "../components/Calendar";
+import { Calendar } from "../components";
 export default function Events() {
   return (
     <div id="events" className="bg-background px-8 md:px-16 py-6 md:py-8">
@@ -6,7 +6,7 @@ export default function Events() {
         <h1 className="text-4xl font-black text-content mb-6 md:mb-8">
           Events
         </h1>
-        <EventsCalendar />
+        <Calendar />
       </div>
     </div>
   );

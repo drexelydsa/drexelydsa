@@ -4,7 +4,7 @@ import About from "./About";
 function Home() {
   return (
     <>
-      <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black pt-16">
+      <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black pt-[var(--navbar-height)]">
         {/* Layer 1: The Image */}
         <img
           src={heroJpg}

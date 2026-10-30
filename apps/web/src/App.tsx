@@ -1,7 +1,8 @@
 import "./App.css";
-import Navbar from "./components/navigation/Navbar";
+import { Navbar } from "./components/navigation";
 import Events from "./pages/Events";
 import Home from "./pages/Home";
+import { Footer } from "./components";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Home />
         <Events />
+        <Footer />
       </div>
     </>
   );

@@ -25,6 +25,23 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
+
+    const observer = new ResizeObserver((entries) => {
+      const height = entries[0].contentRect.height;
+      document.documentElement.style.setProperty(
+        "--navbar-height",
+        `${height}px`,
+      );
+    });
+
+    observer.observe(navbar);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <nav
