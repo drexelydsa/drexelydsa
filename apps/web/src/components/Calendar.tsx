@@ -25,7 +25,7 @@ export function EventsCalendar() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
-  const [currentView, setCurrentView] = useState<View>("month");
+  const [currentView, setCurrentView] = useState<View>("agenda");
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
@@ -88,7 +88,6 @@ export function EventsCalendar() {
           onNavigate={handleNavigate}
           popup
           timeslots={2}
-          defaultView="month"
         />
       </div>
 
