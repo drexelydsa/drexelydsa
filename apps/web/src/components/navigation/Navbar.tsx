@@ -54,7 +54,12 @@ function Navbar() {
           <img src={dsaLogo} alt="Drexel YDSA Logo" className="h-16 md:h-32" />
           <div className="hidden items-center space-x-8 md:flex">
             <NavbarSection title="Home" />
-            <NavbarSection title="About" />
+            <NavbarSection
+              title="About"
+              items={[
+                { title: "Drexel YDSA Constitution", href: "/consitution" },
+              ]}
+            />
             <NavbarSection title="Events" />
             <NavbarSection title="Contact" />
             <a href="https://act.dsausa.org/donate/membership/" target="_blank">
