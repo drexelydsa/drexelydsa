@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navigation";
-import { Home, Events } from "./pages/";
+import { Home, Events, Campaigns } from "./pages/";
 import { Footer } from "./components";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           {" "}
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/campaigns" element={<Campaigns />} />
         </Routes>
       </main>
       <Footer />
