@@ -6,11 +6,12 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { title: "Home", route: "/" },
+  { title: "Events", route: "/events" },
   {
     title: "About",
     items: [{ title: "Drexel YDSA Constitution", route: "/constitution" }],
   },
-  { title: "Events", route: "/events" },
+
   {
     title: "Get Involved",
     items: [

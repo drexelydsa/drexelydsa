@@ -4,7 +4,7 @@ import { About } from "../pages/";
 function Home() {
   return (
     <>
-      <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black pt-[var(--navbar-height)]">
+      <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black pt-[var(--navbar-height)] pb-16">
         {/* Layer 1: The Image */}
         <img
           src={heroJpg}

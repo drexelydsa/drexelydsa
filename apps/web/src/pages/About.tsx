@@ -2,10 +2,9 @@ export default function About() {
   return (
     <div
       id="about"
-      className="bg-background-secondary px-8 md:px-16 py-6 md:py-8"
+      className="bg-background-secondary px-8 md:px-16 py-6 md:py-8 pt-32"
     >
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-content mb-4">About Us</h1>
+      <div className="max-w-4xl mx-auto pt-8">
         <p className="text-3xl font-semibold text-primary mb-2">
           We believe a better world is possible.
         </p>
