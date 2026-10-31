@@ -20,16 +20,23 @@ function NavbarSection({
       onMouseEnter={() => items && setDropdownOpen(true)}
       onMouseLeave={() => items && setDropdownOpen(false)}
     >
-      <Link
-        to={`${route}`}
-        onClick={onClick}
-        className="text-5xl md:text-2xl relative inline-flex flex-col md:items-center text-background transition-colors duration-300 leading-none"
-      >
-        <span className="relative z-10">{title}</span>
-        {!items && (
+      {items && !route ? (
+        <span className="text-5xl md:text-2xl relative inline-flex flex-col md:items-center text-background transition-colors duration-300 leading-none">
+          <span className="relative z-10">{title}</span>
           <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
-        )}
-      </Link>
+        </span>
+      ) : (
+        <Link
+          to={`${route}`}
+          onClick={onClick}
+          className="text-5xl md:text-2xl relative inline-flex flex-col md:items-center text-background transition-colors duration-300 leading-none"
+        >
+          <span className="relative z-10">{title}</span>
+          {!items && (
+            <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full" />
+          )}
+        </Link>
+      )}
       {items && dropdownOpen && (
         <div className="absolute left-0 top-full pt-2">
           <div className="bg-primary shadow-lg">
