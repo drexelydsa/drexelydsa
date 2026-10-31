@@ -1,24 +1,25 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navigation";
-import Events from "./pages/Events";
-import Home from "./pages/Home";
+import { Home, Events, Campaigns, Constitution } from "./pages/";
 import { Footer } from "./components";
 
 function App() {
   return (
-    <>
-      {/* Background stays fixed and behind everything */}
-      <div className="fixed top-0 left-0 w-full h-full bg-background-secondary -z-10" />
-
-      <div className="flex flex-col gap-12">
-        {" "}
-        {/* Added flex, flex-col, and a larger gap */}
-        <Navbar />
-        <Home />
-        <Events />
-        <Footer />
-      </div>
-    </>
+    <div className="flex flex-col min-h-screen bg-background">
+      <Navbar />
+      <div style={{ paddingTop: "var(--navbar-height)" }} />
+      <main className="flex-1">
+        <Routes>
+          {" "}
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/campaigns" element={<Campaigns />} />
+          <Route path="/constitution" element={<Constitution />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -3,6 +3,7 @@ import { Menu as MenuIcon } from "lucide-react";
 import NavbarSection from "./NavbarSection";
 import MobileNav from "./MobileNav";
 import dsaLogo from "../../assets/logo.png";
+import { NAV_ITEMS } from "../../constants/navigation";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,10 +54,14 @@ function Navbar() {
         <div className="relative text-background max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <img src={dsaLogo} alt="Drexel YDSA Logo" className="h-16 md:h-32" />
           <div className="hidden items-center space-x-8 md:flex">
-            <NavbarSection title="Home" />
-            <NavbarSection title="About" />
-            <NavbarSection title="Events" />
-            <NavbarSection title="Contact" />
+            {NAV_ITEMS.map((item) => (
+              <NavbarSection
+                key={item.title}
+                title={item.title}
+                route={item.route}
+                items={item.items}
+              />
+            ))}
             <a href="https://act.dsausa.org/donate/membership/" target="_blank">
               <button className="uppercase ml-4 px-6 py-4 bg-background text-content font-black text-2xl rounded-full hover:bg-background-secondary transition-colors duration-300">
                 Join DSA

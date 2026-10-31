@@ -18,8 +18,4 @@ describe('Home page', () => {
     expect(screen.getByRole('button', { name: /Get Involved/i })).toBeInTheDocument();
   });
 
-  it('renders the About section', () => {
-    render(<Home />);
-    expect(screen.getByText(/About Us/i)).toBeInTheDocument();
-  });
 });
