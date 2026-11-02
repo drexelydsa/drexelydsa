@@ -86,7 +86,7 @@ export default function Constitution() {
             (defined as any event hosted by Drexel YDSA, including tabling).
             These members, hereafter referred to as “General Members,” and will
             have the right to vote on Chapter matters and leadership elections.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 General Members shall lose membership status following any
                 academic term where they do not meet the above requirement or
@@ -121,7 +121,7 @@ export default function Constitution() {
           <li>
             Elections shall occur on a meeting date during the last full month
             of the Fall and Spring quarters.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 There shall be a public candidate forum no later than one week
                 prior to the Fall election during a general meeting.
@@ -134,7 +134,7 @@ export default function Constitution() {
           </li>
           <li>
             All elections shall be Meek Single Transferrable Vote.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 In the event of a tie, successive votes will be held until a
                 winner is determined.
@@ -144,7 +144,7 @@ export default function Constitution() {
           <li>
             The term of the Steering Committee shall last one semester or two
             quarters.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 Steering Committee vacancies shall be filled via special
                 election, to be announced within one week of a Steering
@@ -167,7 +167,7 @@ export default function Constitution() {
             members of the Steering Committee may be removed as a result of a
             grievance when they have been found to be negligent or mishandle
             their power and responsibilities.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 Unilateral decision making, abuse of power, domineering
                 discussion/coercing decisions in conversations, breaches of
@@ -195,7 +195,7 @@ export default function Constitution() {
           </li>
           <li>
             The duties of the Co-Chairs shall be:
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>To facilitate meetings.</li>
               <li>To reserve space for meetings, events, and tabling.</li>
               <li>
@@ -218,7 +218,7 @@ export default function Constitution() {
           </li>
           <li>
             The duties of the Secretary shall be:
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>To take minutes at general meetings.</li>
               <li>
                 To send meeting minutes to everyone on the organization’s email
@@ -235,7 +235,7 @@ export default function Constitution() {
           </li>
           <li>
             The duties of the Treasurer shall be:
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>To manage any funds of the organization.</li>
               <li>
                 To maintain an active log of the chapter’s income and
@@ -281,7 +281,7 @@ export default function Constitution() {
             Regular meetings of the organization shall be held weekly. The day
             of the week and time will be determined at the beginning of every
             academic term.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 Meeting times may be changed by two-thirds ({FRAC["23"]}) vote
                 of membership.
@@ -305,7 +305,7 @@ export default function Constitution() {
             The Steering Committee will meet weekly to set an agenda for the
             next general body meeting and discuss any necessary administrative
             tasks to ensure the Chapter functions effectively.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 Every member of the Steering Committee will be required to
                 attend unless they provide notice of their absence 24 hours in
@@ -342,7 +342,7 @@ export default function Constitution() {
             membership. The formation of such committees shall be approved by a
             two-thirds ({FRAC["23"]}) vote of the membership at a regular
             meeting.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 Upon creation, committees must submit their charter laying out
                 their responsibilities to membership and names of at least three
@@ -417,7 +417,7 @@ export default function Constitution() {
             The chapter shall provide a confidential method for chapter members
             to report grievances, through at least two (2) Harassment and
             Grievance Officers (HGOs).
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 To be eligible to serve as an HGO, candidates must be chapter
                 members, receive a nomination from another chapter member, and
@@ -449,12 +449,12 @@ export default function Constitution() {
             HGOs may be removed or suspended from their position by the Steering
             Committee, and may also be subject to a recall according to the same
             procedure which affects members of the Steering Committee.
-            <ol className="list-[lower-alpha] list-outside ml-12 mt-2 text-lg space-y-2">
+            <ol className="list-[lower-alpha] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
               <li>
                 If a grievance is initiated against an HGO, the accused HGO must
                 recuse themself from any ongoing or future grievance cases
                 unless the Steering Committee determines that:
-                <ol className="list-[lower-roman] list-outside ml-12 mt-2 text-lg space-y-2">
+                <ol className="list-[lower-roman] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
                   <li>
                     The claims within the grievance accusing the HGO are found
                     to be unsubstantial, retaliatory or otherwise would not
@@ -471,7 +471,7 @@ export default function Constitution() {
                 HGO, biased practice, failure to acknowledge all evidence, or
                 other conduct in violation of grievance process guidelines and
                 values.
-                <ol className="list-[lower-roman] list-outside ml-12 mt-2 text-lg space-y-2">
+                <ol className="list-[lower-roman] list-outside ml-8 md:ml-12 mt-2 text-lg space-y-2">
                   <li>
                     Membership shall be notified for all changes of HGO
                     membership.
